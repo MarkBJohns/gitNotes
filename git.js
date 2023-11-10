@@ -120,3 +120,12 @@ console.log('Git Fundamentals');
 //                                                              when it was changed to "main". You'll still 
 //                                                              use "master" with gits created before 2020
 // ----------------------------------------------------------------------------------------------------------------
+
+//      HOW BRANCHES WORK
+
+// Make sure the html webpage for these notes are open and click the header. Nothing should happen. This is
+//      because on the master branch, there isn't any functionality set to the header. Now enter "git branch"
+//      into the terminal, and you'll see 'master' and 'add-js'. The add-js branch is an experimental branch
+//      with JavaScript functions added to the webpage. If you enter "git checkout add-js", it will take you
+//      to this branch, and clicking on the header will invert the colors. To go back to the master branch,
+//      enter "git checkout master".
