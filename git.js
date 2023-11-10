@@ -170,3 +170,60 @@ console.log('Git Fundamentals');
 //      with JavaScript functions added to the webpage. If you enter "git checkout add-js", it will take you
 //      to this branch, and clicking on the header will invert the colors. To go back to the master branch,
 //      enter "git checkout master".
+
+// ----------------------------------------------------------------------------------------------------------------
+
+//                                                  GITHUB
+
+// ----------------------------------------------------------------------------------------------------------------
+
+// GitHub is a web-based git repository . It's useful because it allows you to save different code versions
+//      in a way that can't be lost if your personal computer is lost/damaged, and in way that allows other
+//      programmers collaborate. While GitHub uses git, it's also very different from local, self-contained
+//      git.
+
+// You can create a new repository with the url:
+
+//              https://www.github.com/new
+
+//      Here you can add a name for the repository, as well as change certain settings like readMe and 
+//      making the repository public or private. Once your repository is created you have the option to 
+//      start creating the content within the website itself, push a repository on your computer to the 
+//      website, or take it from an existing online repository. GitHub will give you a recommended set of
+//      parameters, as well as give you text to copy for each of the above options.
+
+// For example, these notes are saved as a repository called "gitNotes", giving the url:
+
+//              https://github.com/MarkBJohns/gitNotes
+
+// The repository is empty as it's created, so if we wanted to fill it from scratch, we would enter the 
+//      text given to us on the website into our terminal:
+
+//              echo "# gitNotes" >> README.md
+//              git init
+//              git add README.md
+//              git commit -m "first commit"
+//              git branch -M main
+//              git remote add origin https://github.com/MarkBJohns/gitNotes.git
+//              git push -u origin main
+
+// If we want to take something existing already, such as these notes, we're given:
+
+//              git remote add origin https://github.com/MarkBJohns/gitNotes.git
+//              git branch -M main
+//              git push -u origin main
+
+// ----------------------------------------------------------------------------------------------------------------
+
+//      REMOTE
+
+// Once the repository is created, rather than constantly going back to the webpage, we can set a "remote",
+//      or a nickname for the website we're updating. The default nickname is "origin", but you can make it
+//      whatever you want it to be. So the line "git remote add origin www.example.com" will create a remote
+//      called "origin" that refers to www.example.com.
+
+// To get your git code from your personal computer to GitHub, you use the "git push" command. When you use
+//      push, you also need to specify which remote you want to push to, as well as the branch. The first
+//      it will look something like "git push origin master". A shortcut you can use is to add the flag -u to
+//      the push command the first time you push to the master branch. This makes it so you don't have to
+//      type out the entire command every time and can just enter "git push".
