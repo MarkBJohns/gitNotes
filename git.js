@@ -106,6 +106,46 @@ console.log('Git Fundamentals');
 
 // MERGING
 
+// If the changes you make on a different branch end up being desirable, the next step is to merge that 
+//      branch into the master branch. Or, if you want two experimental branches together to see how the code
+//      works together, you can merge those. Either way, isolated branches typically aren't meant to stay
+//      isolated, so branches will often be merged into other branches. The command to put two branches
+//      together is "git merge" followed by the branch you want to add, while on the branch you want to add
+//      the other branch to. For example, there's an 'html' branch where paragraph elements are added to the
+//      html files. If we want to add those elements to the master branch, we go to the master branch and
+//      enter "git merge html".
+
+// Be sure that all your changes are committed or otherwise accounted for before you merge.
+
+// 1. Fast-forward Merge:
+//      the basic merge, takes a set of commits from one branch and adds them to the list of the other 
+//      branch's commits chronologically.
+
+// 2. Recursive Merge:
+//      if the commits aren't clear and chronological, a recursive merge is run instead
+
+// There are several possible conflicts with merging, such as when a file is being edited in two separate
+//      branches, and both branches are merged into the master branch. For instance, we created a folder 
+//      called "git_conflicts" and added a text file called "second.txt". We then made a new branch called
+//      "new_branch" and created a new version of "second.txt" with different text inside. When we try to
+//      merge the branches, we get an error saying the branches can't automatically merge until the conflicts
+//      are resolved. If you open the second.txt file, it will say this:
+
+//                                          <<<<<<< HEAD
+//                                          something_else
+//                                          =======
+//                                          second_text
+//                                          >>>>>>> new_branch
+
+//      This displays the text we have from the branch we're trying to merge ("something_else" from 
+//      new_branch) and the existing text in the branch we're trying to merge into ("second_text" from
+//      master). In order to resolve the issue, delete all the lines except for the content you want to
+//      keep. In this case, we'll keep "something_else", so delete the arrow and equal lines as well as 
+//      "second_text". Then save the file and return to the terminal.
+
+// Once a merge error occurs, it becomes the priority for the terminal, and you can't leave your branch until
+//      the issue is resolved. So that you've manually resolved it, commit in the terminal again.
+
 // --------------------------------------------------------------
 
 // By default, a new git commit is saved under the "main" (or "master")* branch, but branches can be given
@@ -114,7 +154,8 @@ console.log('Git Fundamentals');
 
 // Once you've merged the branch, or if you decide not to merge it after all, you can delete it with the
 //      -d branch, with "git branch -d BRANCH-NAME". If the work on the branch isn't committed anywhere else,
-//      you'll get an error message, and the work around is to use -D instead of -d.
+//      you'll get an error message, and the work around is to use -D instead of -d. You also can't delete
+//      the branch you're currently on, so you need to move to a new branch before you delete it.
 
 //                                                         *"master" was previously used in GitHub until 2020,
 //                                                              when it was changed to "main". You'll still 
