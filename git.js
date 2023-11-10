@@ -1,7 +1,9 @@
 console.log('Git Fundamentals');
 // ----------------------------------------------------------------------------------------------------------------
 
-//      GIT
+//                                                 GIT
+
+// ----------------------------------------------------------------------------------------------------------------
 
 // Git is a tool that allows developers to keep track of versions of their code over time. This is
 //      useful for both keeping track of your own updates to code, as well as working in groups to
@@ -75,3 +77,46 @@ console.log('Git Fundamentals');
 // 1. Add author name and email:
 //      git config --global user.name "NAME"
 //      git config --global user.email "EMAIL"
+
+// ----------------------------------------------------------------------------------------------------------------
+
+//      BRANCHING AND MERGING
+
+// ----------------------------------------------------------------------------------------------------------------
+
+// BRANCHING
+
+// --------------------------------------------------------------
+
+// So far, each of the git version saved have been on the same "branch", which usually isn't optimal. When
+//      working with a team or trying to do experimental work with specific features, you want to be able to
+//      do your work without messing up every other aspect of the code. You can do this by creating a branch
+//      off the code, dedicated to whatever individual coder or purpose. You can see all the branches in your
+//      local code with the "git branch" command, and see all the remote branches as well with the -a flag.
+
+// To create a new branch, use the "git checkout" command with the -b flag, followed by the name you want to 
+//      give your new branch. The placement of your branch is important because all code on ther current 
+//      branch will be included in the new one. 
+
+// To move between branches, simply remove the -b flag and enter "git checkout BRANCH_NAME". Note that if you
+//      try to leave a branch with unsaved work, you'll get an error message, so the easiest way around this
+//      is to commit your work to the current branch before moving on to the next.
+
+// ----------------------------------------------------------------------------------------------------------------
+
+// MERGING
+
+// --------------------------------------------------------------
+
+// By default, a new git commit is saved under the "main" (or "master")* branch, but branches can be given
+//      their own names relative to their purpose. However, when these branches are completed, we can
+//      integrate them back in by merging them into the main branch.
+
+// Once you've merged the branch, or if you decide not to merge it after all, you can delete it with the
+//      -d branch, with "git branch -d BRANCH-NAME". If the work on the branch isn't committed anywhere else,
+//      you'll get an error message, and the work around is to use -D instead of -d.
+
+//                                                         *"master" was previously used in GitHub until 2020,
+//                                                              when it was changed to "main". You'll still 
+//                                                              use "master" with gits created before 2020
+// ----------------------------------------------------------------------------------------------------------------
