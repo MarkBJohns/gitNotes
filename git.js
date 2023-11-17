@@ -228,4 +228,12 @@ console.log('Git Fundamentals');
 //      the push command the first time you push to the master branch. This makes it so you don't have to
 //      type out the entire command every time and can just enter "git push".
 
-// hasdflkjfdsaljkldsfjlaksdfjlkasdfliokfsjliksdfjfsda
+// ----------------------------------------------------------------------------------------------------------------
+
+//      CLONING
+
+// Rather than pushing your own repository to somewhere else, you might want to take a repository that 
+//      already exists and save a copy for yourself. You can do this using the 'clone' command. This is
+//      useful for working on an open-source project, or if a personal computer is damaged and you want to 
+//      pull your old code from GitHub to your new computer. You do this by finding the repository link, 
+//      and entering "git clone https://www.example.com".
